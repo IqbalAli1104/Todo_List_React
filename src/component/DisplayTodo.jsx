@@ -54,7 +54,14 @@ function DisplayTodo (){
             {todos.length > 0 && sort === "active" ? todos.map((todo) => (
                 todo.completed === false &&(
                 <ul key={todo.id}>
-                    <TodoList id={todo.id} title ={todo.title} completed = {todo.completed}/>
+                    <TodoList 
+                        id={todo.id} 
+                        title ={todo.title} 
+                        completed = {todo.completed}
+                        setShowModal = {setShowModal}
+                        setCurrentTodo = {setCurrentTodo}
+                        setNewTitle = {setNewTitle}
+                        />
                 </ul>
                 )
             ))
@@ -62,7 +69,14 @@ function DisplayTodo (){
             {todos.length > 0 && sort === "completed" ? todos.map((todo) => (
                 todo.completed === true &&(
                 <ul key={todo.id}>
-                    <TodoList id={todo.id} title ={todo.title} completed = {todo.completed} handleUpdate = {handleUpdate}/>
+                    <TodoList 
+                        id={todo.id} 
+                        title ={todo.title} 
+                        completed = {todo.completed}
+                        setShowModal = {setShowModal}
+                        setCurrentTodo = {setCurrentTodo}
+                        setNewTitle = {setNewTitle}
+                        />
                 </ul>
                 )
             ))
