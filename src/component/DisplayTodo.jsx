@@ -1,4 +1,4 @@
-import TodoList from "./todoList";
+import TodoList from "./TodoList";
 import { useDispatch, useSelector } from "react-redux"
 import './DisplayTodo.css'
 import { useState } from "react";
