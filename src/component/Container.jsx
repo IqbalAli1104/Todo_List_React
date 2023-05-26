@@ -1,21 +1,15 @@
-import TodoList from "./todoList"
+import TaskInput from "./TaskInput"
+import DisplayTodo from "./DisplayTodo"
+import './Container.css'
+import { useSelector } from "react-redux"
+
 function Container (){
+    const todos = useSelector((state)=> state.todos)
     return(
-        <>
-            <div class="container">
-                <div class="task-input">
-                    <input type="text" placeholder="Add a new task"/>
-                    <span id="add">add</span>
-                </div>
-                <div class="filter">
-                    <span id="All">All</span>
-                    <span id="Active">Active</span>
-                    <span id="Complete">Complete</span>
-                </div>
-                <ul>
-                    <TodoList />
-                    <TodoList />
-                </ul>
+        <>  
+            <div className="container">
+                <TaskInput />
+                <DisplayTodo/>
             </div>
         </>
     )

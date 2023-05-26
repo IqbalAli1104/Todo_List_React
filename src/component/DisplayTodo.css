@@ -1,0 +1,18 @@
+.filter {
+    display: flex;
+    padding: 20px 0 15px;
+    cursor: pointer;
+}
+.filter span{
+    margin: 0 10px;
+    font-weight: bold
+}
+.filter .all{
+    color: #3C87FF;
+}
+.filter .active{
+    color: #3C87FF;
+}
+.filter .completed{
+    color: #3C87FF;
+}
