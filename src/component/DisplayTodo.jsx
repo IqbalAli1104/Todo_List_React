@@ -9,8 +9,6 @@ function DisplayTodo (){
     const [currentTodo, setCurrentTodo] = useState(null);
     const [newTitle, setNewTitle] = useState("");
     const [sort, setSort] = useState("all")
-    console.log(currentTodo)
-    console.log(newTitle)
     const dispatch = useDispatch()
     const todos = useSelector((state)=> state.todos)
     const handleUpdate = (id,title) => {
@@ -35,9 +33,9 @@ function DisplayTodo (){
                 </div>
             )}
             <div className="filter">
-                <span id="All" className={sort == "all" ? 'all' : 'all'} onClick={()=> setSort("all")} >All</span>
-                <span id="Active" className={sort == "active" ? 'active' : 'active'} onClick={()=> setSort("active")}>Active</span>
-                <span id="Complete" className={sort == "completed" ? 'completed' : 'completed'} onClick={()=> setSort("completed")}>Complete</span>
+                <span id="All" className={sort == "all" ? 'all' : ''} onClick={()=> setSort("all")} >All</span>
+                <span id="Active" className={sort == "active" ? 'active' : ''} onClick={()=> setSort("active")}>Active</span>
+                <span id="Complete" className={sort == "completed" ? 'completed' : ''} onClick={()=> setSort("completed")}>Complete</span>
             </div>
 
             {todos.length > 0 && sort === "all" ? todos.map((todo) => (
